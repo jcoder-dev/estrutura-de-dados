@@ -62,7 +62,7 @@ public class Vetor {
 		return Arrays.toString(elementos);
 	}
 	*/
-	public String toString()
+	/*public String toString()
 	{
 		String s = "[";
 		
@@ -80,6 +80,38 @@ public class Vetor {
 		s += "]";
 		
 		return s;
+		
+	}*/
+	
+	public String toString()
+	{
+		StringBuilder s = new StringBuilder();
+		s.append("[");
+		
+		for(int i = 0; i < this.tamanho - 1; i++)
+		{
+			s.append(this.elementos[i]);
+			s.append(",");
+		}
+		
+		if( this.tamanho > 0)
+		{
+			s.append(elementos[ this.tamanho - 1 ]);
+		}
+		
+		s.append("]");
+		
+		return s.toString();
+		
+	}
+	
+	public String busca(int posicao)
+	{
+		if( !(posicao > 0 && posicao < tamanho))
+		{
+			throw new IllegalArgumentException("Posicao Invalida");
+		}
+		return this.elementos[posicao];
 		
 	}
 	
