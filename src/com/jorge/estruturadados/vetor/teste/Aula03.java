@@ -1,10 +1,12 @@
-package com.jorge.estruturadados.vetor;
+package com.jorge.estruturadados.vetor.teste;
+
+import com.jorge.estruturadados.vetor.Vetor;
 
 public class Aula03 {
 
 	public static void main(String[] args) {
 		
-		Vetor vetor = new Vetor(2);
+		Vetor vetor = new Vetor(5);
 		
 		try
 		{
@@ -16,7 +18,7 @@ public class Aula03 {
 			e.printStackTrace();
 		}
 		
-		
+		System.out.println(vetor.tamanho());
 		
 		
 
