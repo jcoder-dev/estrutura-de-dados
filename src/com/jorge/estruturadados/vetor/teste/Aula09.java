@@ -14,7 +14,20 @@ public class Aula09 {
 		letras.adiciona("F");
 		
 		System.out.println(letras);
-		System.out.println(letras.remover(2));
+		
+		int posicao = letras.busca("E");
+		if(posicao >= 0)
+		{
+			System.out.println("Remover o elemento " + letras.busca(posicao));
+			letras.remove(posicao);
+		}
+		
+		else
+		{
+			System.out.println("Posicao nao existe");
+		}
+		
+		
 		System.out.println(letras);
 		System.out.println(letras.tamanho());
 
